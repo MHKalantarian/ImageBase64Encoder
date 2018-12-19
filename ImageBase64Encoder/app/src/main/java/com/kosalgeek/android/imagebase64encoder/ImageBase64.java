@@ -112,7 +112,7 @@ public class ImageBase64 {
     private String encodeImageToString(Bitmap bitmap){
         ByteArrayOutputStream bao = new ByteArrayOutputStream();
         int quality = 100; //100: compress nothing
-        bitmap.compress(Bitmap.CompressFormat.JPEG, quality, bao);
+        bitmap.compress(Bitmap.CompressFormat.PNG, quality, bao);
 
         if(bitmap != null){//important! prevent out of memory
             bitmap.recycle();
